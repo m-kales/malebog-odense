@@ -27,7 +27,7 @@ html, body {
 }
 
 .cls-1 {
-    stroke: none;
+    stroke: 0;
 }
 
 .picker {
