@@ -27,13 +27,8 @@ html, body {
 }
 
 .cls-1 {
-    transform: scale(0.1);
-    transition: all .5s ease-in;
-}
-
-.cls-1:hover {
-    transform: scale(1);
-}
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
 
 .picker {
     border: none;
