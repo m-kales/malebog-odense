@@ -26,11 +26,6 @@ html, body {
     height: 100%;
 }
 
-.cls-1 {
-    transition: all 1s ease;
-    
-}
-
 .picker {
     border: none;
     outline: none;
