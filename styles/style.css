@@ -22,6 +22,7 @@ body {
 #artboard {
     height: 80%;
     width: auto;
+    border: 1px solid #020000;
 }
 
 .illustration {
@@ -30,9 +31,27 @@ body {
 }
 
 #picker {
-    border: none;
     outline: none;
     height: 3rem;
     width: 3rem;
     padding: 0;
+    border: 1px solid #020000;
+    box-shadow: 3px 3px #020000;
+    transition: all .2s ease-out;
+}
+
+#clear-btn {
+    place-self: end;
+    margin-right: 1rem;
+    border: 1px solid #020000;
+    background: #ffffff;
+    padding: .3rem .5rem;
+    cursor: pointer;
+    box-shadow: 3px 3px #020000;
+    transition: all .2s ease-out;
+}
+
+#clear-btn:active, #picker:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 #020000;
 }
