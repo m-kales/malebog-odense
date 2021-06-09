@@ -22,7 +22,6 @@ body {
 #artboard {
     height: 80%;
     width: auto;
-    border: 1px solid #020000;
 }
 
 .illustration {
@@ -41,10 +40,10 @@ body {
 }
 
 #clear-btn {
-    place-self: end;
+    place-self: flex-end;
     margin-right: 1rem;
     border: 1px solid #020000;
-    background: #ffffff;
+    background: #fff;
     padding: .3rem .5rem;
     cursor: pointer;
     box-shadow: 3px 3px #020000;
