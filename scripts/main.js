@@ -9,23 +9,21 @@ color = picker.value;
 },false);
 
 let selectedPath;
-//let fillArr = [''];
+let fillArr = [];
 
 svg.onclick = function(event) {
   let target = event.target;
   paint(target); 
-  console.log(target);
-  //window.localStorage.setItem(selectedPath, color);
+  fillArr.push({selectedPath: selectedPath});
 };
 
 function paint(path) {
   selectedPath = path;
   selectedPath.style.cssText=`fill: ${color}`;
+  selectedPath.classList.add('transition');
 }
 
-//window.localStorage.getItem(selectedPath);
-
 clearBtn.addEventListener('click', () => {
-  localStorage.clear();
-  console.log('storage cleared')
+  location.reload();
+  console.log('reloaded')
 })

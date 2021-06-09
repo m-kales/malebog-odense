@@ -24,6 +24,11 @@ body {
     height: 100%;
 }
 
+.transition {
+    transform-origin: center;
+    transition: 200ms cubic-bezier(0.83,0.22,0.8,1.31);
+}
+
 #picker {
     outline: none;
     height: 3rem;
