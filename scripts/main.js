@@ -17,7 +17,6 @@ let selectedPath;
 const svg = document.querySelector('.illustration');
 svg.onclick = function(event) {
   let target = event.target;
-  if (target.tagName != 'path') return;
   highlight(target); 
   console.log(target);
 };
