@@ -6,11 +6,6 @@ const clearBtn = document.getElementById('clear-btn');
 picker.addEventListener('input', () => {
 color = picker.value;
 },false);
-/*for (let i = 0; i < clsOne.length; i++) {
-  clsOne[i].addEventListener('click', () => {
-    clsOne[i].style.fill = color;
-  });
-}*/
 
 let selectedPath;
 
