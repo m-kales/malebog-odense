@@ -1,57 +1,63 @@
 window.onload = function() {
   const picker = document.querySelector("#picker");
   let color = picker.value;
-  const clsOne = document.querySelectorAll('.cls-1');
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
   const showHex = document.querySelector("#show-hex");
+  const toggle = document.getElementById('toggle');
+  let selectedPath;
 
-  if (document.getElementById('toggle').checked) {
-    console.log('if');
-    picker.addEventListener('input', () => {
-    color = picker.value;
-    },false);
+  svg.onclick = function clickSvg(event) {
+    let target = event.target;
+    paint(target); 
+  };
 
-    let selectedPath;
-    let fillArr = [];
+  function paint(path) {
+    selectedPath = path;
+    selectedPath.style.cssText=`fill: ${color}`;
+    selectedPath.classList.add('transition');
+  }
+  
+  toggle.addEventListener('change', (e) => {
+    this.checkboxValue = e.target.checked ? 'on' : 'off';
 
-    svg.onclick = function(event) {
-      let target = event.target;
-      paint(target); 
-      fillArr.push({selectedPath: selectedPath});
-    };
+    if (toggle.checked) {
+      console.log('if');
+      color = picker.value;
+      picker.addEventListener('input', () => {
+      color = picker.value;
+      }, false);
+      svg.addEventListener('click', () => {
+        color = picker.value;
+      })
+      picker.classList.remove('hide');
+      showHex.classList.add('hide');
+      
 
-    function paint(path) {
-      selectedPath = path;
-      selectedPath.style.cssText=`fill: ${color}`;
-      selectedPath.classList.add('transition');
+    } else if (!toggle.checked) {
+      console.log('else');
+
+      picker.classList.add('hide');
+      showHex.classList.remove('hide');
+        // random coloring
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+          svg.addEventListener('click', () => {
+            let hexColor = "#";
+            for (let i = 0; i < 6; i++) {
+              hexColor += hex[getRandomNumber()];
+              color = hexColor;
+            }
+            
+            
+            showHex.innerHTML = hexColor;
+            
+            function getRandomNumber() {
+              return Math.floor(Math.random() * hex.length);
+            }
+          })
     }
-    picker.classList.remove('hide');
-    showHex.classList.add('hide');
-
-  } else {
-    console.log('else');
-      // random coloring
-      const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-      for (let i = 0; i < clsOne.length; i++) {
-        clsOne[i].addEventListener('click', () => {
-          let hexColor = "#";
-          for (let i = 0; i < 6; i++) {
-            hexColor += hex[getRandomNumber()];
-          }
-          clsOne[i].style.fill = hexColor;
-          console.log(hexColor);
-          showHex.innerHTML = hexColor;
-          picker.classList.add('hide');
-          showHex.classList.remove('hide');
-        });
-  }
-
-  function getRandomNumber() {
-    return Math.floor(Math.random() * hex.length);
-  }
-  }
-
+    }
+  )
   // controls
   clearBtn.addEventListener('click', () => {
     location.reload();
