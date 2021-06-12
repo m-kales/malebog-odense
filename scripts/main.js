@@ -1,6 +1,6 @@
 window.onload = function() {
   const picker = document.querySelector("#picker");
-  let color = picker.value('#ff00ff');
+  let color = picker.value;
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
   const showHex = document.querySelector("#show-hex");
