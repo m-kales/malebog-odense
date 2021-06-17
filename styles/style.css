@@ -83,8 +83,7 @@ body {
 .mode-active {
     transform: scale(.9);
     transform-origin: bottom;
-    box-shadow: -1px -1px #020000;
-    border: 2px solid #020000;
+    box-shadow: none;
 }
 
 .hide {
