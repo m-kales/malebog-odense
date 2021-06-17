@@ -23,16 +23,14 @@ randomStyle();
 
     btnPicker.addEventListener('click', () => {
       color = picker.value;
-      btnPicker.classList.add('active-mode');
-      btnRandom.classList.remove('active-mode');
-      console.log('Picker clicked');
+      btnPicker.classList.add('mode-active');
+      btnRandom.classList.remove('mode-active');
       pickerStyle();
     })
   
     btnRandom.addEventListener('click', () => {
-      btnRandom.classList.add('active-mode');
-      btnPicker.classList.remove('active-mode');
-      console.log('Random clicked');
+      btnRandom.classList.add('mode-active');
+      btnPicker.classList.remove('mode-active');
       randomStyle();
     })
   
