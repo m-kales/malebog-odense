@@ -2,6 +2,7 @@ window.onload = function() {
   const picker = document.querySelector("#picker");
   let color = picker.value;
   const clearBtn = document.getElementById('clear-btn');
+  const backBtn = document.querySelector('.btn-back--circle');
   const svg = document.querySelector('.illustration');
   const showHex = document.querySelector("#show-hex");
   const btnRandom = document.getElementById('random');
@@ -69,5 +70,11 @@ randomStyle();
   clearBtn.addEventListener('click', () => {
     location.reload();
     console.log('reloaded')
+  })
+
+  backBtn.addEventListener('click', () => {
+    function goBack() {
+      window.history.back(-1);
+    }
   })
 }
