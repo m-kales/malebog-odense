@@ -32,7 +32,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
 
 }
 
@@ -69,6 +69,16 @@ body {
 }
 
 .btn-back--circle {
+    border-radius: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn-download--circle {
     border-radius: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -125,7 +135,7 @@ body {
     visibility: hidden;
     transform: scaleY(0);
 }
-/*
+
 @media (orientation: portrait) {
     #artboard {
         height: auto;
@@ -173,4 +183,3 @@ body {
         align-items: center;
     }
 }
-*/
