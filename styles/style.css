@@ -26,12 +26,12 @@ body {
 }
 
 .toolbar {
-    padding-top: 1rem;
     width: 100%;
     height: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: .4rem;
     justify-content: space-between;
 
 }
@@ -126,14 +126,41 @@ body {
     justify-content: space-between;
 }
 
-
 .mode-active {
     color: #020000;
+    transform: scale(1.2);
 }
 
 .hide {
     visibility: hidden;
     transform: scaleY(0);
+}
+
+/* palette */
+.palette-container {
+    width: 100%;
+    display: flex;
+}
+
+.swatch-list { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.swatch-item--circle {
+    border: 1px solid #020000;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+}
+.swatch-item--circle:hover {
+    transform: scale(1.2);
+    transform-origin: center;
 }
 
 @media (orientation: portrait) {
@@ -146,29 +173,33 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        width: 90vw;
     }
 
     .mode-container {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        border: #020000 1px solid;
         height: 20%;
         width: 100%;
     }
 
-    #clear-btn {
-        margin-bottom: 0;
+    .swatch-list {
+        align-items: center;
+        justify-content: space-evenly;
+        gap: .4rem;
     }
+
 }
 
+/* media queries */
 @media screen and (max-height: 650px) {
     #artboard {
         height: 96%;
         width: auto;
     }
-    
-    .mode-wrap {
+
+    .mode-container {
         flex-direction: column;
     }
 
@@ -181,5 +212,24 @@ body {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        width: 100%;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .palette-container {
+        height: 90vh;
+        align-items: center;
+    }
+
+    .swatch-list {
+        flex-direction: column;
+        height: 100%;
+        gap: .4rem;
+        align-items: center;
+        justify-content: center;
     }
 }
