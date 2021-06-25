@@ -138,14 +138,19 @@ body {
     list-style: none;
     padding: 0;
 }
-.swatch-item--circle {
+.swatch-item {
     border: 1px solid #020000;
     border-radius: 100%;
     width: 2rem;
     height: 2rem;
 }
-.swatch-item--circle:hover {
-    transform: scale(1.2);
+
+.active {
+    transform: scale(1.1);
+}
+
+.swatch-item:hover {
+    transform: translateY(-2px);
     transform-origin: center;
 }
 

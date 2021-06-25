@@ -16,7 +16,7 @@ window.onload = function() {
   }
   
     btnRandom.addEventListener('click', () => {
-      btnRandom.classList.add('mode-active');
+      btnRandom.classList.toggle('mode-active');
       randomStyle();
     })
   
@@ -93,25 +93,26 @@ window.onload = function() {
         hexColor: '#F7AAC9' 
     }
   ]
-  let color = swatchArray[0].hexColor;
+  let color = swatchArray[11].hexColor;
   const swatchList = document.querySelector('.swatch-list');
-
   function createPalette() {
     for (let i = 0; i < swatchArray.length; i++) {
       let swatch = document.createElement('li');
-      swatch.className = 'swatch-item--circle transition';
+      swatch.className = 'swatch-item transition';
       swatch.style.backgroundColor = swatchArray[i].hexColor;
       swatch.addEventListener('click', setColor);
       swatchList.appendChild(swatch);
+
       function setColor() {
         color = swatchArray[i].hexColor;
-        swatch.addEventListener('click', function() {
-          (document.querySelector('.mode-active')) ? document.querySelector('.mode-active').classList.remove('mode-active') : '';
-          this.classList.add('mode-active');
-        })
+          if (document.querySelector('.active') !== null) {
+            document.querySelector('.active').classList.remove('active');
+          }
+          swatch.classList.add('active');
       }
     }
   }
+
   createPalette();
 
 }
