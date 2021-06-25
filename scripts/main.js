@@ -17,11 +17,7 @@ window.onload = function() {
   
     btnRandom.addEventListener('click', () => {
       btnRandom.classList.toggle('mode-active');
-      if (btnRandom.classList.contains('mode-active') {
       randomStyle();
-      } else {
-      createPalette();
-      }
     })
   
   function randomStyle() {
