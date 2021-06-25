@@ -20,7 +20,7 @@ window.onload = function() {
       if (btnRandom.classList.contains('mode-active') {
       randomStyle();
       } else {
-      return;
+      createPalette();
       }
     })
   
