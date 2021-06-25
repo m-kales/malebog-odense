@@ -108,6 +108,8 @@ body {
     padding: 2rem;
     line-height: 1.2rem;
     text-align: left;
+    transform-origin: top right;
+    z-index: 10;
 }
 
 .mode-active {
@@ -117,7 +119,7 @@ body {
 
 .hide {
     visibility: hidden;
-    transform: scaleY(0);
+    transform: scale(0);
 }
 
 /* palette */
