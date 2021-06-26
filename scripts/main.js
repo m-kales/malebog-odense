@@ -1,7 +1,7 @@
 window.onload = function() {
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
-  const btnRandom = document.getElementById('random');
+  //const btnRandom = document.getElementById('random');
   let selectedPath;
 
   svg.onclick = function clickSvg(event) {
@@ -15,7 +15,7 @@ window.onload = function() {
     selectedPath.classList.add('transition');
   }
   
-    btnRandom.addEventListener('click', () => {
+   /* btnRandom.addEventListener('click', () => {
       btnRandom.classList.toggle('mode-active');
       randomStyle();
     })
@@ -34,7 +34,7 @@ window.onload = function() {
             return Math.floor(Math.random() * hex.length);
           }
         })
-      }
+      }*/
 
   // controls
   clearBtn.addEventListener('click', () => {
