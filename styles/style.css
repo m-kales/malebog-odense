@@ -104,6 +104,7 @@ body {
     background: #fff;
     color: #020000;
     border: 2px solid #F57F08;
+    border-radius: 4px;
     width: 26ch;
     padding: 2rem;
     line-height: 1.2rem;
@@ -154,6 +155,8 @@ body {
     transform-origin: center;
 }
 
+/* media queries */
+
 @media (orientation: portrait) {
     #artboard {
         height: auto;
@@ -183,7 +186,7 @@ body {
 
 }
 
-/* media queries */
+
 @media screen and (max-height: 650px) {
     #artboard {
         height: 96%;
@@ -210,7 +213,12 @@ body {
         flex-direction: column;
         justify-content: space-between;
     }
-    
+    .text-info {
+        left: 0;
+        right: unset;
+        top: unset;
+        transform-origin: left center;
+    }
     .palette-container {
         height: 90vh;
         align-items: center;
