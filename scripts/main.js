@@ -16,10 +16,10 @@ window.onload = function() {
     selectedPath.classList.add('transition');
   }
   
-  swatchRandom.addEventListener('click', () => {
+  /*swatchRandom.addEventListener('click', () => {
       swatchRandom.classList.toggle('mode-active');
       randomStyle();
-    }) 
+    }) */
   
   function randomStyle() {
       // random coloring
