@@ -16,10 +16,10 @@ window.onload = function() {
     selectedPath.classList.add('transition');
   }
   
-   /* btnRandom.addEventListener('click', () => {
-      btnRandom.classList.toggle('mode-active');
+  swatchRandom.addEventListener('click', () => {
+      swatchRandom.classList.toggle('mode-active');
       randomStyle();
-    }) */
+    }) 
   
   function randomStyle() {
       // random coloring
