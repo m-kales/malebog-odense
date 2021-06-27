@@ -146,6 +146,13 @@ body {
     height: 2rem;
 }
 
+.swatch-random {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 .active {
     transform: scale(1.1);
 }
