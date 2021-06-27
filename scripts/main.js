@@ -1,7 +1,7 @@
 window.onload = function() {
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
-  //const btnRandom = document.getElementById('random');
+
   const swatchRandom = document.querySelector('.swatch-random');
   let selectedPath;
 
