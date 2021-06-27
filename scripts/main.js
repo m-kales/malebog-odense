@@ -2,6 +2,7 @@ window.onload = function() {
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
   //const btnRandom = document.getElementById('random');
+  //const swatchRandom = document.querySelector('swatch-random');
   let selectedPath;
 
   svg.onclick = function clickSvg(event) {
@@ -18,12 +19,12 @@ window.onload = function() {
    /* btnRandom.addEventListener('click', () => {
       btnRandom.classList.toggle('mode-active');
       randomStyle();
-    })
-  
+    }) */
+  /*
   function randomStyle() {
       // random coloring
       const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-        svg.addEventListener('click', () => {
+        swatchRandom.addEventListener('click', () => {
           let hexRandom = "#";
           for (let i = 0; i < 6; i++) {
             hexRandom += hex[getRandomNumber()];
@@ -34,6 +35,10 @@ window.onload = function() {
             return Math.floor(Math.random() * hex.length);
           }
         })
+        
+        swatchRandom.style.backgroundColor = hexRandom;
+        swatchRandom.classList.add('active');
+        
       }*/
 
   // controls
