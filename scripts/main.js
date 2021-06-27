@@ -29,15 +29,14 @@ window.onload = function() {
           for (let i = 0; i < 6; i++) {
             hexRandom += hex[getRandomNumber()];
             color = hexRandom;
+            swatchRandom.style.backgroundColor = hexRandom;
+            swatchRandom.classList.add('active');
           }
           
           function getRandomNumber() {
             return Math.floor(Math.random() * hex.length);
           }
         })
-        
-        swatchRandom.style.backgroundColor = hexRandom;
-        swatchRandom.classList.add('active');
         
       }
 
