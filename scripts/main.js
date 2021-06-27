@@ -39,6 +39,7 @@ window.onload = function() {
         })
         
       }
+    randomStyle();
 
   // controls
   clearBtn.addEventListener('click', () => {
