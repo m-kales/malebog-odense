@@ -155,11 +155,11 @@ body {
 .active {
     transform: scale(1.1);
 }
-*/
+
 .swatch-item:hover {
     transform: translateY(-2px);
     transform-origin: center;
-}
+}*/
 
 /* media queries */
 
