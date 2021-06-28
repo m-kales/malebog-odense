@@ -78,7 +78,7 @@ body {
     padding: .2rem 1rem;
 }
 
-.btn:hover {
+/*.btn:hover {
     transform: scaleX(1.1);
     background: rgba(0, 0, 0, .05);
     border: 2px solid transparent;
@@ -88,7 +88,7 @@ body {
     transform: translateY(2px);
     opacity: .8;
 }
-
+*/
 .btn-info {
     position: relative;   
 }
@@ -108,12 +108,12 @@ body {
     transform-origin: top right;
     z-index: 10;
 }
-
+/*
 .mode-active {
     color: #020000;
     transform: scale(1.2);
 }
-
+*/
 .hide {
     visibility: hidden;
     transform: scale(0);
@@ -146,7 +146,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/*
 .eraser > #Layer_1 {
     width: 1rem;
     height: auto;
@@ -159,7 +159,7 @@ body {
 .swatch-item:hover {
     transform: translateY(-2px);
     transform-origin: center;
-}
+}*/
 
 /* media queries */
 
