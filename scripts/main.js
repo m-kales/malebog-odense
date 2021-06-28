@@ -20,11 +20,11 @@ window.onload = function() {
   /*swatchRandom.addEventListener('click', () => {
       swatchRandom.classList.toggle('mode-active');
       randomStyle();
-    }) 
+    }) */
   
   eraser.addEventListener('click', () => {
     color = '#fff';
-  })*/
+  })
   
   function randomStyle() {
       // random coloring
