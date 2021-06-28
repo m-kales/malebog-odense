@@ -198,7 +198,17 @@ and (max-device-width: 820px) {
        flex-wrap: wrap;
        overflow: hidden;
    }
+   
    .swatch-item {
     margin: .2rem 0;
+   }
+
+   .text-info {
+       bottom: 0;
+       left: 0;
+       top: unset;
+       right: unset;
+       transform-origin: bottom left;
+       width: 46ch;
    }
 }
