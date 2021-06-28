@@ -162,7 +162,7 @@ body {
 }*/
 
 /* media queries */
-
+/*
 @media (min-width: 500px) {
     .wrapper {
         grid-template-columns: 1fr 3fr 1fr;
@@ -172,7 +172,7 @@ body {
         ".  palette     ."
         ". toolbar-2    .";
     }
-}
+}*/
 
 @media screen and (orientation:landscape)
 and (max-device-width: 820px) {
@@ -198,7 +198,7 @@ and (max-device-width: 820px) {
        flex-wrap: wrap;
        overflow: hidden;
    }
-   
+
    .swatch-item {
     margin: .2rem 0;
    }
