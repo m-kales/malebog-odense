@@ -3,6 +3,7 @@ window.onload = function() {
   const svg = document.querySelector('.illustration');
 
   const swatchRandom = document.querySelector('.swatch-random');
+  const eraser = document.querySelector('.eraser');
   let selectedPath;
 
   svg.onclick = function clickSvg(event) {
@@ -20,6 +21,10 @@ window.onload = function() {
       swatchRandom.classList.toggle('mode-active');
       randomStyle();
     }) */
+  
+  eraser.addEventListener('click', () => {
+    color = '#fff';
+  })
   
   function randomStyle() {
       // random coloring
