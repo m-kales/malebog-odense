@@ -176,7 +176,7 @@ btn:hover {
 }*/
 
 @media screen and (orientation:landscape)
-and (max-device-height: 699px) {
+and (max-device-width: 1023px) {
    .wrapper {
     grid-template-columns: 1fr 5fr 2fr 1fr;
     grid-template-areas: 
