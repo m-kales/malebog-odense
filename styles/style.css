@@ -40,11 +40,11 @@ body {
     grid-area: artboard;
     max-width: 100%;
 }
-
+/*
 .illustration {
     height: 100%;
     width: auto;
-}
+}*/
 
 .transition {
     transition: all 300ms cubic-bezier(0.83,0.22,0.8,1.31);
