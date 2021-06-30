@@ -4,6 +4,7 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 body {
@@ -79,7 +80,7 @@ body {
 }
 
 .btn--rect {
-    padding: .2rem 1rem;
+    height: 2rem;
 }
 
 .btn:hover {
