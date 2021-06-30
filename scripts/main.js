@@ -17,11 +17,6 @@ window.onload = function() {
     selectedPath.classList.add('transition');
   }
   
-  /*swatchRandom.addEventListener('click', () => {
-      swatchRandom.classList.toggle('mode-active');
-      randomStyle();
-    }) */
-  
   eraser.addEventListener('click', () => {
     color = '#fff';
   })
