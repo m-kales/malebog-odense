@@ -21,15 +21,15 @@ body {
         "artboard"
         "palette"
         "toolbar-2" ;
-    gap: 1rem;
+    gap: .2rem;
     justify-content: center;
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
 }
 
 .toolbar-1 {
     grid-area: toolbar-1;
-    padding-top: 1rem;
+    padding: .4rem 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,7 +38,6 @@ body {
 
 .artboard {
     grid-area: artboard;
-    max-width: 100%;
 }
 /*
 .illustration {
@@ -56,6 +55,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding-bottom: .4rem;
 }
 
 .btn {
@@ -80,7 +80,7 @@ body {
     padding: .2rem 1rem;
 }
 
-btn:hover {
+.btn:hover {
     transform: scaleX(1.1);
     background: rgba(0, 0, 0, .05);
     border: 2px solid transparent;
@@ -109,11 +109,6 @@ btn:hover {
     text-align: left;
     transform-origin: top right;
     z-index: 10;
-}
-
-.mode-active {
-    color: #020000;
-    transform: scale(1.2);
 }
 
 .hide {
@@ -164,27 +159,29 @@ btn:hover {
 }
 
 /* media queries */
-/*
-@media (min-width: 500px) {
+
+@media (min-width: 1024px) {
     .wrapper {
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
         ".  toolbar-1   ."
         ".  artboard    ."
         ".  palette     ."
         ". toolbar-2    .";
     }
-}*/
+}
 
 @media screen and (orientation:landscape)
 and (max-device-width: 1023px) {
    .wrapper {
-    grid-template-columns: 1fr 5fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
     grid-template-areas: 
     "toolbar-1  artboard   palette   toolbar-2"
     "toolbar-1  artboard   palette   toolbar-2"
-    "toolbar-1  artboard   palette   toolbar-2";
+    ".  artboard   .   .";
     gap: .2rem;
+    align-items: space-between;
+    justify-items: center;
    }
 
    .toolbar-1, .toolbar-2 {
@@ -195,14 +192,14 @@ and (max-device-width: 1023px) {
        justify-content: space-evenly;
    }
 
-   .palette {
+   .swatch-list {
        flex-direction: column;
        flex-wrap: wrap;
-       overflow: hidden;
+       max-height: 90vh;
    }
 
    .swatch-item {
-    margin: .2rem 0;
+    margin: .2rem .2rem;
    }
 
    .text-info {
