@@ -38,10 +38,12 @@ body {
 
 .artboard {
     grid-area: artboard;
+    display: flex;
+    justify-content: center;
 }
 
 .illustration {
-    height: 90%;
+    height: 96%;
     width: auto;
 }
 
@@ -180,7 +182,6 @@ and (max-device-width: 1023px) {
     "toolbar-1  artboard   palette   toolbar-2"
     ".  artboard   .   .";
     gap: .2rem;
-    align-items: space-between;
     justify-items: center;
    }
 
