@@ -105,7 +105,7 @@ body {
     color: #020000;
     border: 2px solid #F57F08;
     border-radius: 4px;
-    width: 26ch;
+    width: 32ch;
     padding: 2rem;
     line-height: 1.2rem;
     text-align: left;
@@ -204,11 +204,11 @@ and (max-device-width: 1023px) {
    }
 
    .text-info {
-       bottom: 0;
+       bottom: -7em;
        left: 0;
        top: unset;
        right: unset;
        transform-origin: bottom left;
-       width: 46ch;
+       width: 64ch;
    }
 }
