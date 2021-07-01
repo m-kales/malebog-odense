@@ -8,8 +8,8 @@ window.onload = function() {
 
   svg.onclick = function clickSvg(event) {
     let target = event.target;
-    paint(target); 
-  };
+    paint(target);
+  }
 
   function paint(path) {
     selectedPath = path;
