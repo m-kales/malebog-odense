@@ -20,7 +20,7 @@ function downloadPNG() {
         let context = canvas.getContext('2d');
         
         context.drawImage(image, 0, 0, width, height);
-        // downloadImage(canvas);
+        
         let png = canvas.toDataURL();
 
         const download = function(href, name) {
@@ -32,10 +32,10 @@ function downloadPNG() {
             link.click();
             link.remove();
         }
-
-        download(png, 'image.png');
+        const date = new Date();
+        const [month, day, hour, minutes] = [date.getMonth(), date.getDate(), date.getHours(), date.getMinutes()];
+        download(png, `malebog-odense-${month}.${day}.${hour}${minutes}.png`);
     }
 
     image.src = blobURL;
-    console.log(blobURL);
 }
