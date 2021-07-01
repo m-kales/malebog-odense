@@ -34,7 +34,7 @@ function downloadPNG() {
         }
         const date = new Date();
         const [month, day, hour, minutes] = [date.getMonth(), date.getDate(), date.getHours(), date.getMinutes()];
-        download(png, `malebog-odense-${month}.${day}.${hour}${minutes}.png`);
+        download(png, `malebog-odense-${day}-${month}.${hour}${minutes}.png`);
     }
 
     image.src = blobURL;
