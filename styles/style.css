@@ -100,16 +100,15 @@ body {
 .text-info {
     position: absolute;
     top: 0;
-    right: 0;
     background: #fff;
     color: #020000;
     border: 2px solid #F57F08;
     border-radius: 4px;
-    width: 32ch;
+    width: 24ch;
     padding: 2rem;
     line-height: 1.2rem;
     text-align: left;
-    transform-origin: top right;
+    transform-origin: top;
     z-index: 10;
 }
 
