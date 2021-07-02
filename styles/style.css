@@ -160,7 +160,7 @@ body {
 }
 
 /* media queries */
-
+/*
 @media (min-width: 1024px) {
     .wrapper {
         grid-template-columns: 1fr 1fr 1fr;
@@ -170,7 +170,7 @@ body {
         ".  palette     ."
         ". toolbar-2    .";
     }
-}
+}*/
 
 @media screen and (orientation:landscape)
 and (max-device-width: 1023px) {
