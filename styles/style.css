@@ -44,7 +44,7 @@ body {
 }
 
 .illustration {
-    height: 96%;
+    max-height: 96%;
     width: auto;
 }
 
