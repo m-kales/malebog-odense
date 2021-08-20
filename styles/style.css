@@ -52,6 +52,7 @@ body {
     justify-content: space-evenly;
     padding-bottom: .4rem;
     max-width: 60vw;
+    margin: 0 auto;
 }
 
 .btn {
