@@ -16,14 +16,6 @@ body {
 }
 
 .wrapper {
-    display: grid;
-    grid-template-areas:
-        "toolbar-1"
-        "artboard"
-        "palette"
-        "toolbar-2" ;
-    gap: .2rem;
-    justify-content: center;
     max-height: 100vh;
     width: 100vw;
 }
