@@ -9,13 +9,16 @@ window.onload = function() {
   svg.onclick = function clickSvg(event) {
     let target = event.target;
     paint(target);
+    pathId = selectedPath.getAttribute('d');
+    localStorage.setItem(pathId, color);
+
   }
 
   function paint(path) {
     selectedPath = path;
     selectedPath.style.cssText=`fill: ${color}`;
     selectedPath.classList.add('transition');
-    pathId = selectedPath.getAttribute('d');
+
   }
 
   eraser.addEventListener('click', () => {
@@ -45,6 +48,7 @@ window.onload = function() {
   // controls
   clearBtn.addEventListener('click', () => {
     location.reload();
+    localStorage.clear();
     console.log('reloaded')
   })
 
