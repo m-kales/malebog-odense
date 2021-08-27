@@ -1,10 +1,10 @@
 window.onload = function() {
   const clearBtn = document.getElementById('clear-btn');
   const svg = document.querySelector('.illustration');
-
   const swatchRandom = document.querySelector('.swatch-random');
   const eraser = document.querySelector('.eraser');
   let selectedPath;
+  let pathId;
 
   svg.onclick = function clickSvg(event) {
     let target = event.target;
@@ -15,8 +15,9 @@ window.onload = function() {
     selectedPath = path;
     selectedPath.style.cssText=`fill: ${color}`;
     selectedPath.classList.add('transition');
+    pathId = selectedPath.getAttribute('d');
   }
-  
+
   eraser.addEventListener('click', () => {
     color = '#fff';
   })
