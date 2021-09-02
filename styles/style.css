@@ -41,9 +41,6 @@ body {
     grid-area: artboard;
     display: flex;
     justify-content: center;
-}
-
-.illustration {
     max-height: 96%;
     width: auto;
 }
