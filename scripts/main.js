@@ -8,35 +8,16 @@ window.onload = function() {
   let color;
 
   function setFills() {
-    /*let fillColor = Object.keys(localStorage).forEach(function(key){
-      console.log(localStorage.getItem(key));
-      let fillPaths = svg.querySelectorAll(key);
-      fillPaths.forEach((fillPath) => {
-        fillPath.style.fill = fillColor;
-        console.log(fillPaths);
-      })
-    });*/
-/*
-    let fillColor = localStorage.getItem('M662.52,132.47a11.73,11.73,0,0,0,.09,1.75c2.23-2,8.8-3.65,16.79-4.08,7.07-.37,14.46.32,17.12,2.27,0-10-7.64-18.11-17-18.11a16,16,0,0,0-5.1.84C667.3,117.53,662.52,124.49,662.52,132.47Z');
-    let fillPath = svg.querySelectorAll('[d="M662.52,132.47a11.73,11.73,0,0,0,.09,1.75c2.23-2,8.8-3.65,16.79-4.08,7.07-.37,14.46.32,17.12,2.27,0-10-7.64-18.11-17-18.11a16,16,0,0,0-5.1.84C667.3,117.53,662.52,124.49,662.52,132.47Z"]');
-    fillPath.forEach(function(path) {
-      path.style.fill = fillColor;
-    });*/
     let fillPath = svg.querySelectorAll('path[d]');
-    /*let fillColor = Object.keys(localStorage).forEach(function(key){
-      console.log(localStorage.getItem(key));
-    });*/
+
     Object.entries(localStorage).forEach(([key, value]) => {
       fillPath.forEach(function(path) {
         let d = path.getAttribute('d');
-        console.log(value);
         if ( key === d) {
         path.style.fill = value;
         }
       });
     });
-
-
   }
 
   setFills();
