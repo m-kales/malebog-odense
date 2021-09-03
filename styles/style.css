@@ -60,10 +60,11 @@ body {
 
 .btn {
     background: #FFFFFF;
-    border: 2px solid #F57F08;
+    border: 2px solid #020000;
     border-radius: 4px;
     color: #020000;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .btn--circle {
@@ -78,11 +79,15 @@ body {
 
 .btn--rect {
     height: 2rem;
+    width: 4rem;
+    color: #fff;
+    background: #020000;
 }
 
 .btn:hover {
     background: rgba(0, 0, 0, .05);
     border: 2px solid transparent;
+    color: #020000;
 }
 
 .btn:active {
@@ -99,7 +104,7 @@ body {
     top: 20px;
     background: #fff;
     color: #020000;
-    border: 2px solid #F57F08;
+    border: 2px solid #020000;
     border-radius: 4px;
     width: 30ch;
     padding: 2rem;
@@ -107,6 +112,7 @@ body {
     text-align: left;
     transform-origin: top;
     z-index: 10;
+    font-weight: 500;
 }
 
 .hide {
@@ -127,10 +133,9 @@ body {
 }
 
 .swatch-item {
-    border: 2px solid #020000;
     border-radius: 100%;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: .2rem;
 }
 
@@ -142,13 +147,17 @@ body {
     align-items: center;
 }
 
+.swatch-random:hover {
+    border: none;
+}
+
 .eraser > #Layer_1 {
     width: 1rem;
     height: auto;
 }
 
 .active {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .swatch-item:hover {
