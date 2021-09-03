@@ -9,7 +9,6 @@ window.onload = function() {
 
   function setFills() {
     let fillPath = svg.querySelectorAll('path[d]');
-
     Object.entries(localStorage).forEach(([key, value]) => {
       fillPath.forEach(function(path) {
         let d = path.getAttribute('d');
@@ -48,7 +47,6 @@ window.onload = function() {
             hexRandom += hex[getRandomNumber()];
             color = hexRandom;
             swatchRandom.style.backgroundColor = hexRandom;
-            swatchRandom.classList.add('active');
           }
           
           function getRandomNumber() {
@@ -70,54 +68,42 @@ window.onload = function() {
   const swatchArray = [
     {
         name: 'swatch_01',
-        hexColor: '#FFFF00'
+        hexColor: '#ffcd00'
     },
     {
         name: 'swatch_02',
-        hexColor: '#FF8532'
+        hexColor: '#faff98'
     },
     {
         name: 'swatch_03',
-        hexColor: '#80FF80' 
+        hexColor: '#bbdd00' 
     },
     {
         name: 'swatch_04',
-        hexColor: '#00CC00' 
+        hexColor: '#5a8900' 
     },
     {
         name: 'swatch_05',
-        hexColor: '#009999' 
+        hexColor: '#009c89' 
     },
     {
         name: 'swatch_06',
-        hexColor: '#820000' 
+        hexColor: '#e31d04' 
     },
     {
         name: 'swatch_07',
-        hexColor: '#002B80' 
+        hexColor: '#ff7b83' 
     },
     {
         name: 'swatch_08',
-        hexColor: '#CC0052' 
+        hexColor: '#ffa6a0' 
     },
     {
         name: 'swatch_09',
-        hexColor: '#B30047' 
-    },
-    {
-        name: 'swatch_10',
-        hexColor: '#C653C6' 
-    },
-    {
-        name: 'swatch_11',
-        hexColor: '#006666' 
-    },
-    {
-        name: 'swatch_12',
-        hexColor: '#F7AAC9' 
+        hexColor: '#320e00' 
     }
   ]
-  color = swatchArray[11].hexColor;
+  color = swatchArray[0].hexColor;
   const swatchList = document.querySelector('.swatch-list');
   function createPalette() {
     for (let i = 0; i < swatchArray.length; i++) {
