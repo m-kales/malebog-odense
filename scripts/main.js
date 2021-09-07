@@ -6,7 +6,7 @@ window.onload = function() {
   let selectedPath;
   let pathId;
   let color;
-  let md5Hash;
+  let idHash
 
   function setFills() {
     let fillPath = svg.querySelectorAll('path[d]');
@@ -26,9 +26,9 @@ window.onload = function() {
     let target = event.target;
     paint(target);
     pathId = selectedPath.getAttribute('d');
-    md5Hash = md5(pathId);
-    localStorage.setItem(md5Hash, color);
-    console.log(md5Hash);
+    idHash = md5(pathId);
+    localStorage.setItem(idHash, color);
+    console.log(idHash);
   }
 
   function paint(path) {
