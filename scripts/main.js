@@ -9,12 +9,13 @@ window.onload = function() {
   let idHash
 
   function setFills() {
-    let fillPath = svg.querySelectorAll('path[d]');
+    let fillPath = svg.querySelectorAll('*');
     Object.entries(localStorage).forEach(([key, value]) => {
       fillPath.forEach(function(path) {
-        let d = path.getAttribute('d');
+        let d = path.outerHTML;
         if ( key === md5(d)) {
         path.style.fill = value;
+        console.log('if indeed');
         }
       });
     });
@@ -25,10 +26,10 @@ window.onload = function() {
   svg.onclick = function clickSvg(event) {
     let target = event.target;
     paint(target);
-    pathId = selectedPath.getAttribute('d');
+    pathId = selectedPath.outerHTML;
     idHash = md5(pathId);
     localStorage.setItem(idHash, color);
-    console.log(idHash);
+    //console.log(pathId, idHash);
   }
 
   function paint(path) {
