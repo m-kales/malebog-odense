@@ -6,13 +6,14 @@ window.onload = function() {
   let selectedPath;
   let pathId;
   let color;
+  let md5Hash;
 
   function setFills() {
     let fillPath = svg.querySelectorAll('path[d]');
     Object.entries(localStorage).forEach(([key, value]) => {
       fillPath.forEach(function(path) {
         let d = path.getAttribute('d');
-        if ( key === d) {
+        if ( key === md5(d)) {
         path.style.fill = value;
         }
       });
@@ -25,7 +26,9 @@ window.onload = function() {
     let target = event.target;
     paint(target);
     pathId = selectedPath.getAttribute('d');
-    localStorage.setItem(pathId, color);
+    md5Hash = md5(pathId);
+    localStorage.setItem(md5Hash, color);
+    console.log(md5Hash);
   }
 
   function paint(path) {
@@ -61,7 +64,6 @@ window.onload = function() {
   clearBtn.addEventListener('click', () => {
     location.reload();
     localStorage.clear();
-    console.log('reloaded')
   })
 
   // palette
