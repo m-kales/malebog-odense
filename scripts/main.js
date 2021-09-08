@@ -9,13 +9,14 @@ window.onload = function() {
   let idHash
 
   function setFills() {
-    let fillPath = svg.querySelectorAll('*');
+    let fillPath = svg.querySelectorAll('.cls-1');
     Object.entries(localStorage).forEach(([key, value]) => {
       fillPath.forEach(function(path) {
         let d = path.outerHTML;
+        console.log(key, d);
+        //console.log('key', key, 'md5(d)', md5(d));
         if ( key === md5(d)) {
         path.style.fill = value;
-        console.log('if indeed');
         }
       });
     });
@@ -28,14 +29,13 @@ window.onload = function() {
     paint(target);
     pathId = selectedPath.outerHTML;
     idHash = md5(pathId);
-    localStorage.setItem(idHash, color);
-    //console.log(pathId, idHash);
+    localStorage.setItem(pathId, color);
   }
 
   function paint(path) {
     selectedPath = path;
     selectedPath.style.fill = color;
-    selectedPath.classList.add('transition');
+    //selectedPath.classList.add('transition');
   }
 
   eraser.addEventListener('click', () => {
